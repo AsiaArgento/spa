@@ -1,0 +1,195 @@
+/****** Google Fonts ******/
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/***** Main Styles ******/
+
+.header{
+  background-image: url(../img/spa-flowers.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  position: relative;
+}
+.left{
+  position: absolute;
+  left: 5%;
+  top:30%;
+}
+.title{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.intro{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  margin-top: .6em;
+  max-width: 650px;
+  line-height: 1.1;
+}
+.carrot{
+  left: 150px;
+  position: absolute;
+  bottom: 30px;
+}
+.carrot a{
+  text-decoration: none;
+  color: #000;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.4rem;
+}
+.services{
+  background-color: #FFC5CB;
+}
+.service-container{
+  padding: 4em 2em;
+}
+.list{
+  line-height: 2.5;
+  padding: 0 1em;
+  font-family: 'PT Sans', sans-serif;
+}
+.list li{
+  font-size: 1rem;
+}
+.services-title{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/****** Accordion Styles ******/
+
+.accordion {
+  background-color: #fff;
+  font-family: 'PT Sans', sans-serif;
+  cursor: pointer;
+  padding: 1em;
+  width: 90%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.1rem;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #eee;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 95%;
+}
+
+/* Scroll Icon */
+.scroll-down {
+  margin:0 auto;
+  position:relative;
+  top:50%;
+  animation-name:bounce;
+  animation-duration:1s;
+  animation-iteration-count:infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform:translateY(0px);
+  }
+  to {
+    transform:translateY(10px);
+  }
+}
+
+/****** Footer Styles *****/
+.footer{
+  background-color: #eee;
+  height: 10vh;
+}
+.text{
+  color:#fff;
+  font-family: 'PT Sans', sans-serif;
+  text-align: right;
+  padding-top: 1em;
+  padding-right:2em;
+  font-size: 1rem;
+}
+
+/* Tablet */
+@media (min-width: 440px){
+  .header{
+    height: 70vh;
+  }
+  .title{
+    font-size: 3.4rem;
+  }
+  .intro{
+    font-size: 2.4rem;
+  }
+  .services-title{
+    font-size: 2.6rem;
+  }
+  .accordion{
+    font-size: 1.8rem;
+  }
+  .carrot{
+    left:350px;
+  }
+  .footer{
+    height: 8vh;
+  }
+  .list li{
+    font-size: 1.4rem;
+    padding-left: .6em;
+  }
+  .text{
+    font-size: 1.4rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px){
+  .header{
+    height: 90vh;
+  }
+  .service-container{
+    padding: 4em 4em;
+  }
+  .footer{
+    height: 12vh;
+  }
+  .carrot{
+    left:600px;
+  }
+}
+
+/* Extra Large */
+@media (min-width: 1920px){
+  .carrot{
+    left:850px;
+  }
+  .footer{
+    height: 10vh;
+  }
+}
